@@ -49,8 +49,8 @@
         android:textColor="@color/colorText"
         android:layout_gravity="center"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/member_recyclerview"
+    <FrameLayout
+        android:id="@+id/member_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
