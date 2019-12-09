@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         bitMemberFragment = new BITMemberFragment();
         transaction = getSupportFragmentManager().beginTransaction();
 
-        transaction.replace(R.id.member_fragment, new BITMemberFragment());
+        transaction.replace(R.id.member_fragment, bitMemberFragment);
         transaction.addToBackStack(null);
         transaction.commit();
 
@@ -52,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 String dateOfBirth = etDateOfBirth.getText().toString();
                 String gender = etGender.getText().toString();
 
-                bitMember.add(new BITMember(name, dateOfBirth, gender));
-                BITMemberFragment bitMemberFragment = new BITMemberFragment();
+                bitMemberFragment.sendMemberValue(name,dateOfBirth,gender);
                 bitMemberFragment.setAdapter();
             }
         });

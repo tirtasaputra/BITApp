@@ -19,6 +19,8 @@ public class BITMemberFragment extends Fragment {
 
     BITMember bitMembers;
 
+    private String name, dateOfBirth, gender;
+
     public BITMemberFragment() {
 
     }
@@ -40,11 +42,11 @@ public class BITMemberFragment extends Fragment {
     }
 
     public void setAdapter(){
-
+        bitMember.add(new BITMember(name, dateOfBirth, gender));
         recyclerView.setAdapter(adapter);
     }
 
-    void addData(){
+    public void addData(){
         bitMember = new ArrayList<>();
         bitMember.add(new BITMember("Edwin", "12-01-1997", "M"));
         bitMember.add(new BITMember("Putra", "12-01-1997", "M"));
@@ -62,6 +64,12 @@ public class BITMemberFragment extends Fragment {
         bitMember.add(new BITMember("Evelyn", "12-01-1997", "W"));
         bitMember.add(new BITMember("William", "12-01-1997", "M"));
         bitMember.add(new BITMember("Fakhri", "12-01-1997", "M"));
+    }
+
+    public void sendMemberValue(String name, String dateOfBirth, String gender){
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
     }
 
 }
