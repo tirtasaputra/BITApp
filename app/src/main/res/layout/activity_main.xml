@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -49,7 +50,17 @@
         android:textColor="@color/colorText"
         android:layout_gravity="center"/>
 
-    <FrameLayout
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="8dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabIndicator="@color/colorAccent"/>
+
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/member_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

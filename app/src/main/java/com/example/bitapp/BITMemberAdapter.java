@@ -39,8 +39,10 @@ public class BITMemberAdapter extends RecyclerView.Adapter<BITMemberAdapter.BITM
         String gender = bitMember.get(position).getGender();
         if (gender.equals("M")){
             holder.ivGender.setImageResource(R.drawable.image_man);
-        } else {
+        } else if (gender.equals("W")){
             holder.ivGender.setImageResource(R.drawable.image_woman);
+        } else {
+            holder.ivGender.setImageResource(R.drawable.image_monkey);
         }
 
 
