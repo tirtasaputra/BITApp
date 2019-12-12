@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnAddMember;
 
     BITMemberFragment bitMemberFragment, manBitMemberFragment, womanBitMemberFragment;
-    FragmentTransaction transaction;
+//    FragmentTransaction transaction;
 
     ViewPager viewPager;
     TabLayout tabLayout;
@@ -38,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//
-        bitMemberFragment = new BITMemberFragment();
-        manBitMemberFragment = new BITMemberFragment();
-        womanBitMemberFragment = new BITMemberFragment();
+
+        bitMemberFragment = new BITMemberFragment("All");
+        manBitMemberFragment = new BITMemberFragment("Man");
+        womanBitMemberFragment = new BITMemberFragment("Woman");
+
 //        transaction = getSupportFragmentManager().beginTransaction();
 //
 //        transaction.replace(R.id.member_fragment, bitMemberFragment);
